@@ -9,8 +9,11 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 # inicializar la instancia del servicio del driver 
 from selenium.webdriver.chrome.service import Service
-# importamos la librería para las esperas 
-import time
+# importamos la librería time, lo comentamos para usar librerías de las esperas
+# import time 
+from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support.ui import expected_conditions as EC 
+from selenium.webdriver.support import expected_conditions as EC
 
 # website a testear 
 URL = 'https://www.saucedemo.com/'
@@ -34,7 +37,9 @@ def get_driver():
     # creamos una instancia del driver y le pasamos los servicios para manejar el driver 
     driver = webdriver.Chrome(service=service)
     # le damos 5 segundos de espera para visualizar navegador antes de cerrar sesión 
-    time.sleep(5)
+    # time.sleep(5)
+    driver.implicitly_wait(5) 
+
     # la función retorna el driver 
     return driver
 
@@ -42,17 +47,24 @@ def get_driver():
 def login_saucedemo(driver):
     # llamamos a la url deseada 
     driver.get(URL)
+
+    # recién cuando se cumpla que aparece el elemento se envía el texto
+    WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.NAME,'user-name'))
+    ).send_keys(USERNAME)
     
     # ingresar las credenciales 
     # usamos el find_element para encontrar los elementos buscados 
     # y en la función By le indicamos el tipo de selector a buscar 
     # el método send_keys nos permite tipear el texto 
-    driver.find_element(By.NAME,'user-name').send_keys(USERNAME)
+    # comentamos la línea para usar la EC más arriba 
+    # driver.find_element(By.NAME,'user-name').send_keys(USERNAME)
     driver.find_element(By.NAME,'password').send_keys(PASSWORD)
     # sobre el botón usamos el método click() 
     driver.find_element(By.ID,'login-button').click()
     
-    time.sleep(7)
+    # comentamos el sleep para probar las EC 
+    # time.sleep(7)
 
 
 
