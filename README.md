@@ -1,7 +1,7 @@
 
 #  Curso Automation Testing de Talento Tech 2025 
 
-Pre entrega de proyecto final
+Proyecto final del curso
 
 
 ## Tecnologías Requeridas
