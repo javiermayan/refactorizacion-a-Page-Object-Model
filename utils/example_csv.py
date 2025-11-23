@@ -1,5 +1,8 @@
 # necesitamos importar el archivo .csv 
 import csv
+# necesitamos importar el archivo json 
+import json
+# from .helpers import get_file_path
 # y declarar la ruta al mismo 
 # necesitamos pasar la ruta relativa a absoluta para que ubique el archivo 
 from pathlib import Path
@@ -28,3 +31,27 @@ def get_login_csv(csv_file="data_login.csv"):
 
     # devolvemos la variable casos rellenada  
     return casos
+
+# versión del test para json
+# se comenta para correr solo el test de csv 
+""" def get_login_json(json_file="data_login.json"):
+
+    # current_file = os.path.dirname(__file__)
+    # json_file = os.path.join(current_file,"..","data",json_file)
+    # # ../data/data_login.json=> rel
+    # json_file = os.path.abspath(json_file)
+    json_file = Path(__file__).parent.parent / "data" / json_file
+
+
+    casos = []
+
+    with open(json_file) as j:
+        # en el caso de json usamos el método load para recibir el archivo a leer
+        datos = json.load(j)
+
+        for i in datos:
+            username= i["username"]
+            password=i["password"]
+            login_example= i["login_example"]
+            casos.append((username, password,login_example))
+    return casos """
