@@ -1,6 +1,8 @@
 
 # importamos la url y credenciales desde helpers 
-from utils.helpers import URL, USERNAME, PASSWORD
+# deprecado para datos externos 
+# from utils.helpers import URL, USERNAME, PASSWORD
+from utils.helpers import URL 
 from selenium.webdriver.common.by import By
 # también importamos WebDriverException y EC para las esperas explícitas 
 from selenium.webdriver.support.ui import WebDriverWait
@@ -23,7 +25,9 @@ class LoginPage:
         self.driver.get(URL)
 		
     # 2- tipear el user y pass y le asignamos el valor importado 
-    def login(self, username= USERNAME, password = PASSWORD): 
+    # deprecado para datos externos
+    # def login(self, username= USERNAME, password = PASSWORD): 
+    def login(self, username, password): 
     # ejecutamos un espera explícita para asegurar que el elemento se haya cargado
         WebDriverWait(self.driver,5).until(
             EC.element_to_be_clickable(self._INPUT_NAME)

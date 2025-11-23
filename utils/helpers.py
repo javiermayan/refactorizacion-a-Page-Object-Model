@@ -1,4 +1,5 @@
-# aquí desarrollamos el sistema de login con Selenium 
+# aquí van las funciones que no son del test ni del page 
+# inicializamos el driver, desarrollamos el sistema de login con Selenium 
 # importamos la librería que permite controlar el navegador
 from selenium import webdriver
 # importamos el By para mediante el findElement encontrar el tipo de selector 
@@ -18,9 +19,10 @@ from selenium.webdriver.support import expected_conditions as EC
 # website a testear 
 URL = 'https://www.saucedemo.com/'
 # user para login 
-USERNAME = 'standard_user'
+# reemplazado con archivo externo 
+# USERNAME = 'standard_user'
 # pass para login 
-PASSWORD = 'secret_sauce'
+# PASSWORD = 'secret_sauce'
 
 ''' 
 función para instalación automática del driver y pasarle los servicios para iniciar 
