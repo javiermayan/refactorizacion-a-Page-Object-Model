@@ -1,7 +1,7 @@
 
 #  Curso Automation Testing de Talento Tech 2025 
 
-Proyecto final del curso
+Proyecto final del curso: incluye Page Object Model, Data-driven testing, Faker
 
 
 ## Tecnologías Requeridas
@@ -14,6 +14,8 @@ Proyecto final del curso
 
     Git y GitHub para control de versiones
 
+    Faker para datos dinámicos 
+
 ## Instrucciones para instalacion de dependencias
     
     pip install pytest pytest-html
@@ -21,6 +23,8 @@ Proyecto final del curso
     pip install selenium
 
     pip install webdriver-manager
+
+    pip install faker
 
 ## Comandos para ejecutar el reporte html
 
