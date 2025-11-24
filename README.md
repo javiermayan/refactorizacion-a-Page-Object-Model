@@ -16,6 +16,8 @@ Proyecto final del curso: incluye Page Object Model, Data-driven testing, Faker
 
     Faker para datos dinámicos 
 
+    Requests para API testing
+
 ## Instrucciones para instalacion de dependencias
     
     pip install pytest pytest-html
@@ -25,6 +27,8 @@ Proyecto final del curso: incluye Page Object Model, Data-driven testing, Faker
     pip install webdriver-manager
 
     pip install faker
+
+    pip install requests
 
 ## Comandos para ejecutar el reporte html
 
