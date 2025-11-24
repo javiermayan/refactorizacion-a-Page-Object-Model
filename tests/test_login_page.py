@@ -8,14 +8,18 @@ from data.data_login import CASOS_LOGIN
 # y get_login_json desde data_login.json 
 from utils.example_csv import get_login_csv
 # from utils.example_csv import get_login_json
+# importamos desde utils la función get_login_faker
+from utils.faker import get_login_faker 
 
 
 # parametrizamos los distintos usuarios
 #@pytest.mark.parametrize("username,password,login_bool",CASOS_LOGIN)
 # para csv no pasamos los casos del archivo sino la función correspondiente get_login_csv
-@pytest.mark.parametrize("username, password, login_bool", get_login_csv())
+# @pytest.mark.parametrize("username, password, login_bool", get_login_csv())
 # para json le pasamos su función get_login_csv
 #@pytest.mark.parametrize("username, password, login_bool", get_login_json())
+# para usar Faker le pasamos su función get_login_faker
+@pytest.mark.parametrize("username, password, login_bool", get_login_faker())
 # declaramos el test e inicializamos el driver 
 def test_login(driver, username, password, login_bool):
     # creamos el objeto (instanciarlo) 
