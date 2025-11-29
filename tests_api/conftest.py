@@ -1,11 +1,13 @@
-# aquí van todos los fixtures que necesite 
+# archivo donde van todos los fixtures que se necesiten 
+# las fixtures preparan datos para ser consumidos por los tests
 
 import pytest
 import logging
 import pathlib
 
-# fixture de la url donde hacer las peticiones en lugar del archivo main.py anterior
+# declaramos la fixture
 @pytest.fixture
+# fixture de la url donde hacer las peticiones en lugar del archivo main.py anterior
 def api_url():
     return 'https://jsonplaceholder.typicode.com/'
 

@@ -2,21 +2,25 @@
 import requests
 import pytest
 # import pytest_check as check 
+# importamos Faker para generar datos aleatorios para test de POST
 from faker import Faker
+# importamos un módulo de Python para obtener la fecha y validar en POST
 from datetime import datetime
 from conftest import logger
 
-
+# instanciamos Faker
 fake = Faker()
 
-def validate_api_response(response, expected_status,expected_fields=None, max_time=1.0):
-    """Función helper para validar respuestas API con los 5 niveles"""
-    # Nivel 1: Status
+# Función helper para validar respuestas API con los 5 niveles 
+def validate_api_response(response, expected_status,expected_fields=None, max_time=1.0):    
+    # Nivel 1: Status = status code esperado
     assert response.status_code == expected_status
-    # Nivel 2: Headers
+    # Nivel 2: Headers: los Headers esperados, 204 = no tiene contenido 
     if expected_status != 204: # 204 No Content puede no tener Content-Type
+        # esperamos json 
         assert 'application/json' in response.headers.get('Content-Type', '')
     # Nivel 3-4: Estructura y contenido (si hay expected_fields)
+    # los campos esperados en la estructura de la respuesta 
     if expected_fields and response.text:
         body = response.json()
         assert expected_fields <= set(body.keys())
@@ -36,57 +40,81 @@ class TestGetUser:
         # en variable respose guardamos la respuesta del método get()
         # le pasamos la url + el endpoint a consumir 
         respose = requests.get(api_url + "users")
+        # llamamos a la función validate_api_response de validación genérica (Helper)
         data = validate_api_response(
             response= respose,
-            expected_status=200,
-            expected_fields=[],
-            max_time=2.0
+            expected_status= 200,
+            expected_fields= [],
+            max_time= 2.0
         )
+        # la misma validación, sin usar la función Helper anterior
+        assert respose.status_code == 200
 
 
+    # creamos otro marker para get pero ahora para testear la data
+    # aunque podrían estar ambas pruebas dentro de un mismo marker
     @pytest.mark.get
     def test_get_response_data(self, api_url):
         response = requests.get(api_url + "users")
-        data = response.json() #LISTA   
+        # almacenamos la response en formato json 
+        data = response.json() # se presenta una estructura del tipo LISTA   
 
-
+        # validamos que tenga data 
         assert len(data) > 0
-        assert isinstance(data,list)
+        # validamos la estrutura del tipo list
+        # primer parámetro: la info a validar, y el 2do: el tipo de estructura a comparar
+        assert isinstance(data, list)
 
+        # obtenemos la estructura de la respuesta para conocer los campos que contiene 
+        # buscamos el primer usuario de la lista recibida en data 
         first_user = data[0]
         print(first_user)
-        key_structure = ["id","name","username","phone","address","website"]
+        # enumeramos los campos que esperamos en la respuesta 
+        key_structure = ["id", "name", "username", "phone", "address", "website"]
 
+        # en cada iteración i toma el valor de cada uno de los campos que llegan en la estructura 
         for i in key_structure:
-            assert i in first_user , f"campo {i} , no esta en {first_user}"
+            # validamos que el campo exista en la response 
+            assert i in first_user , f"campo {i} , no está en {first_user}"
 
-
+# creamos una clase donde uso los makers del método POST 
 class TestPostUser:
 
     @pytest.mark.post
     def test_post_response_code(self,api_url):
 
+        # creamos la variable que representa el nuevo usuario a crear 
+        # en este caso es un diccionario y usamos faker para rellenar los campos
         new_user = {
             "name":fake.name(),
             "email":fake.email(),
             "phone":fake.phone_number(),
+            # hardcodeamos la fecha de creación del usuario 
+            # dejamos comentado createdAt para no fallar el test 
             # "createdAt" :"2022-05-05"     
         }
 
 
         response = requests.post(api_url + "users", new_user)
+        # validamos el status code esperado, en este caso un 201
         assert response.status_code == 201
 
         data = response.json()
+        # creamos un print para visualizar la respuesta 
         print(data)
+        # validamos la creación del campo id 
         assert "id" in data
 
+        # validamos si el año de creación del dato es el esperado 
         if "createdAt" in data:
+            # si existe en data el campo createdAt lo almacenamos en la nueva variable created_at
             created_at = data["createdAt"]
+            # capturamos en una variable el año actual 
             current_year  = datetime.now().year
-            assert str(current_year) in created_at , f"no esta en el año"
-
-
+            # current_year viene como tipo de dato fecha 
+            # lo convertimos a string para hacer la validación 
+            # en el caso de no encontrarse se visualiza el mensaje de 2do parámetro 
+            assert str(current_year) in created_at, f"no esta en el año"
 
 
 class TestUserWorkflow:
