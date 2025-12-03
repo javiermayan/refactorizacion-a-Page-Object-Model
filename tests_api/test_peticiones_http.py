@@ -1,7 +1,8 @@
 # importamos la librería requests y pytest para los tests
 import requests
 import pytest
-# import pytest_check as check 
+# importamos la librería check para aserción blanda sin romper ejecución
+import pytest_check as check 
 # importamos Faker para generar datos aleatorios para test de POST
 from faker import Faker
 # importamos un módulo de Python para obtener la fecha y validar en POST
@@ -116,19 +117,24 @@ class TestPostUser:
             # en el caso de no encontrarse se visualiza el mensaje de 2do parámetro 
             assert str(current_year) in created_at, f"no esta en el año"
 
-
+# creamos una clase que nos permita poner todo en un mismo test 
+# transfiriendo la lógica de los tests anteriores
 class TestUserWorkflow:
 
+    # definimos la estructura del test 
     def test_completo_users(self, api_url):
-        logger.info("TEST ENCANDENADOS : GET, POST , PUT , PATCH , DELETE")
+        logger.info("TEST ENCANDENADOS : GET, POST, PUT, PATCH, DELETE")
         logger.info("1.GET Obtener usuarios")
         #GET: OBTENER LOS USUARIOS
         respose = requests.get(api_url + "users")
         data  = respose.json()
-        check.equal(respose.status_code,200)
+        # acá en lugar del assert usamos el check para no interrumpir ejecución si falla
+        # para eso usamos el método equal del check comparando lo recibido con lo esperado
+        check.equal(respose.status_code, 200)
+        # método de check para validar booleanos 
         check.is_true(len(data) > 0)
-        print("1.POST crear usuarios") # esto no se visualiza
 
+        print("1.POST crear usuarios") # esto no se visualiza
         
         new_user = {
             "name":fake.name(),

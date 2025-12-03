@@ -30,13 +30,26 @@ Proyecto final del curso: incluye Page Object Model, Data-driven testing, Faker
 
     pip install requests
 
-## Comandos para ejecutar el reporte html
+    pip install pytest-check
+
+    pip install pytest-rerunfailures
+
+## Comandos para ejecutar pytest
 
     pytest -v
+
+    pytest -m get -v 
+
+    pytest -m post -v -s 
+
+    pytest -k "TestUserWorkflow" -v -s 
+
 
 ## Comandos para ejecutar el reporte html
     
     pytest --html=reports/report.html --self-contained-html
+
+    pytest -v --html=reports/ui_api_report.html --self-contained-html
 
 ## Evidencias
 
