@@ -7,6 +7,7 @@ import pytest_check as check
 from faker import Faker
 # importamos un módulo de Python para obtener la fecha y validar en POST
 from datetime import datetime
+# importamos la función looger() para obtener info de las ejecuciones 
 from conftest import logger
 
 # instanciamos Faker
@@ -123,6 +124,7 @@ class TestUserWorkflow:
 
     # definimos la estructura del test 
     def test_completo_users(self, api_url):
+        # llamamos a la función que escribe en el log eventos de la ejecución del test
         logger.info("TEST ENCANDENADOS : GET, POST, PUT, PATCH, DELETE")
         logger.info("1.GET Obtener usuarios")
         #GET: OBTENER LOS USUARIOS

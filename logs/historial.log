@@ -32,3 +32,97 @@
 01:27:19 INFO root – 1.GET Obtener usuarios
 01:29:53 INFO root – TEST ENCANDENADOS : GET, POST, PUT, PATCH, DELETE
 01:29:53 INFO root – 1.GET Obtener usuarios
+16:30:39 INFO WDM – ====== WebDriver manager ======
+16:30:45 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:30:45 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:30:45 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:30:45 INFO WDM – WebDriver version 142.0.7444.175 selected
+16:30:45 INFO WDM – Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/142.0.7444.175/win32/chromedriver-win32.zip
+16:30:45 INFO WDM – About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/142.0.7444.175/win32/chromedriver-win32.zip
+16:30:45 INFO WDM – Driver downloading response is 200
+16:30:46 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:30:47 INFO WDM – Driver has been saved in cache [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175]
+16:30:55 INFO WDM – ====== WebDriver manager ======
+16:31:01 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:31:01 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:31:01 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:31:10 INFO WDM – ====== WebDriver manager ======
+16:31:15 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:31:15 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:31:15 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:31:21 INFO WDM – ====== WebDriver manager ======
+16:31:25 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:31:25 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:31:25 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:31:31 INFO WDM – ====== WebDriver manager ======
+16:31:35 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:31:35 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:31:35 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:31:41 INFO root – TEST ENCANDENADOS : GET, POST, PUT, PATCH, DELETE
+16:31:41 INFO root – 1.GET Obtener usuarios
+16:36:54 INFO WDM – ====== WebDriver manager ======
+16:36:59 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:36:59 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:36:59 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:37:06 INFO WDM – ====== WebDriver manager ======
+16:37:11 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:37:11 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:37:11 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:37:20 INFO WDM – ====== WebDriver manager ======
+16:37:27 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:37:28 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:37:28 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:37:36 INFO WDM – ====== WebDriver manager ======
+16:37:42 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:37:42 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:37:42 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:37:50 INFO WDM – ====== WebDriver manager ======
+16:37:56 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:37:56 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:37:56 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:38:04 INFO root – TEST ENCANDENADOS : GET, POST, PUT, PATCH, DELETE
+16:38:04 INFO root – 1.GET Obtener usuarios
+16:44:54 INFO WDM – ====== WebDriver manager ======
+16:44:58 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:44:58 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:44:58 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:45:05 INFO WDM – ====== WebDriver manager ======
+16:45:09 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:45:09 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:45:09 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:45:15 INFO WDM – ====== WebDriver manager ======
+16:45:19 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:45:19 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:45:19 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:45:26 INFO WDM – ====== WebDriver manager ======
+16:45:30 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:45:30 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:45:30 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:45:36 INFO WDM – ====== WebDriver manager ======
+16:45:40 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:45:40 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:45:40 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:45:47 INFO root – TEST ENCANDENADOS : GET, POST, PUT, PATCH, DELETE
+16:45:47 INFO root – 1.GET Obtener usuarios
+16:48:30 INFO WDM – ====== WebDriver manager ======
+16:48:36 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:48:36 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:48:36 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:48:44 INFO WDM – ====== WebDriver manager ======
+16:48:50 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:48:50 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:48:50 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:48:57 INFO WDM – ====== WebDriver manager ======
+16:49:02 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:49:02 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:49:02 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:49:09 INFO WDM – ====== WebDriver manager ======
+16:49:14 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:49:14 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:49:14 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:49:21 INFO WDM – ====== WebDriver manager ======
+16:49:25 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:49:25 INFO WDM – Get LATEST chromedriver version for google-chrome
+16:49:25 INFO WDM – Driver [C:\Users\arjama\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+16:49:32 INFO root – TEST ENCANDENADOS : GET, POST, PUT, PATCH, DELETE
+16:49:32 INFO root – 1.GET Obtener usuarios

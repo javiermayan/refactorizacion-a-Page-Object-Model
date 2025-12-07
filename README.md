@@ -34,6 +34,10 @@ Proyecto final del curso: incluye Page Object Model, Data-driven testing, Faker
 
     pip install pytest-rerunfailures
 
+    pip install behave 
+
+    pip install behave behave-html-formatter 
+
 ## Comandos para ejecutar pytest
 
     pytest -v
@@ -50,6 +54,8 @@ Proyecto final del curso: incluye Page Object Model, Data-driven testing, Faker
     pytest --html=reports/report.html --self-contained-html
 
     pytest -v --html=reports/ui_api_report.html --self-contained-html
+
+    pytest -v --html=reports/report.html --self-contained-html
 
 ## Evidencias
 
