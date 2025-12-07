@@ -21,18 +21,27 @@ def step_api_available(context):
 # endpoint representa el complemento de la URL base
 # se obtiene desde el When del archivo .feature 
 @when('hago GET a "{endpoint}"')
+# la función recibe la url y el endpoint 
 def step_get_request(context, endpoint):
+    # concatena url base con endpoint 
     context.response = requests.get(f"{context.base_url}{endpoint}")
 
+# ahora usamos el otro Scenario
 @when('hago POST a "{endpoint}" con:')
 def step_post_with_table(context, endpoint):
-    # Convertir tabla a diccionario
+    # Convertir tabla que viene de .feature a diccionario
+    # creamos un diccionario vacío y le agregamos los registros clave - valor 
     data = {}
     for row in context.table:
         data[row[0]] = row[1]
     
+    # hacemos un POST indicando la url y el formato json 
     context.response = requests.post(f"{context.base_url}{endpoint}", json=data)
-
+# copiamos el texto del Then desde archivo .feature
+# como el status code lo recibimos como un número y no como string
+# lo definimos entonces como dígito
 @then('el status debe ser {status:d}')
+# creamos la función para validar el status code esperado
 def step_check_status(context, status):
     assert context.response.status_code == status
+    

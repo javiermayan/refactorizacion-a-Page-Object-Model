@@ -57,6 +57,10 @@ Proyecto final del curso: incluye Page Object Model, Data-driven testing, Faker
 
     pytest -v --html=reports/report.html --self-contained-html
 
+## Comandos para ejecutar BDD 
+
+    behave
+    
 ## Evidencias
 
     Se incluye screenshot como evidencia gráfica de la ejecución del test
