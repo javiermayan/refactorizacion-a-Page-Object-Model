@@ -1,0 +1,29 @@
+# nombre del workflow que aparece en solapa Actions en Github
+name: Run API Test
+# definimos los eventos asociados a la integración que va a escuchar
+on:
+    # el tipo de evento disparador 
+    push:
+     branches: [main, master] # las ramas afectadas
+    pull_request:
+     branches: [main, master]
+# le decimos qué tipo de runners va a usar 
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        # comandos individuales para la máquina virtual 
+        steps:
+        # le decimos a la máquina virtual que acceda a los archivos dentro del repo
+        - name: Checkout código 
+          uses: actions/checkout@v4
+
+        - name: Set up python # le decimos la versión de Python a instalar
+          uses: actions/setup-python@v4
+          with:
+             python_version: '3.8'
+        
+        - name: Install Dependences # que instale dependencias
+          run: |
+            python -m pip install --upgrade pip
+            pip install requests  
